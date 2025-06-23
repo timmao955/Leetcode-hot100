@@ -14,9 +14,7 @@ int trap(vector<int>& height) {
             int cur = st.top();
             st.pop();
             if (st.empty()) break;
-            int l = st.top();
-            int r = i;
-            int h = min(height[l], height[r]) - height[cur];
+            int l = st.top(), r = i, h = min(height[l], height[r]) - height[cur];
             ans += (r - l - 1) * h;
         }
         st.push(i);

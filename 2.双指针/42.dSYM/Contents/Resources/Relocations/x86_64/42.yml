@@ -1,6 +1,6 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/mjh/Desktop/Leetcode-hot100/2.two_points/42'
+binary-path:     "/Users/mjh/Desktop/Leetcode-hot100/2.双指针/42"
 relocations:
   - { offsetInCU: 0x712E, offset: 0x712E, size: 0x8, addend: 0x0, symName: __ZNSt3__13minB8ue170006IiEERKT_S3_S3_, symObjAddr: 0x300, symBinAddr: 0x1000011E0, symSize: 0x30 }
   - { offsetInCU: 0x7DAC, offset: 0x7DAC, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB8ue170006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x500, symBinAddr: 0x1000013E0, symSize: 0x50 }
