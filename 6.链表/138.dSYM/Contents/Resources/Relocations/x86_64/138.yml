@@ -1,0 +1,12 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     "/Users/mjh/Desktop/Leetcode-hot100/6.链表/138"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z14copyRandomListP4Node, symObjAddr: 0x0, symBinAddr: 0x100000AE0, symSize: 0x190 }
+  - { offsetInCU: 0x2E1F, offset: 0x2E1F, size: 0x8, addend: 0x0, symName: __Z14copyRandomListP4Node, symObjAddr: 0x0, symBinAddr: 0x100000AE0, symSize: 0x190 }
+  - { offsetInCU: 0x2F1A, offset: 0x2F1A, size: 0x8, addend: 0x0, symName: __ZN4NodeC1EiPS_S0_, symObjAddr: 0x190, symBinAddr: 0x100000C70, symSize: 0x40 }
+  - { offsetInCU: 0x2F6C, offset: 0x2F6C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1D0, symBinAddr: 0x100000CB0, symSize: 0x1F0 }
+  - { offsetInCU: 0x2FDB, offset: 0x2FDB, size: 0x8, addend: 0x0, symName: __ZN4NodeC1Ei, symObjAddr: 0x3C0, symBinAddr: 0x100000EA0, symSize: 0x30 }
+  - { offsetInCU: 0x3011, offset: 0x3011, size: 0x8, addend: 0x0, symName: __ZN4NodeC2EiPS_S0_, symObjAddr: 0x3F0, symBinAddr: 0x100000ED0, symSize: 0x30 }
+  - { offsetInCU: 0x3063, offset: 0x3063, size: 0x8, addend: 0x0, symName: __ZN4NodeC2Ei, symObjAddr: 0x420, symBinAddr: 0x100000F00, symSize: 0x26 }
+...
