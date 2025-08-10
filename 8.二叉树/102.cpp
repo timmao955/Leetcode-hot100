@@ -15,22 +15,22 @@ struct TreeNode {
     }
 };
 
-void bfs(TreeNode* root, vector<vector<int>>& ans, int depth) {
-    TreeNode* cur = root;
-    if (cur == nullptr) {
+void dfs(TreeNode* root, vector<vector<int>>& ans, int depth) {
+    if (root == nullptr) {
         return;
     }
     if (ans.size() == depth) {
         ans.push_back(vector<int>());
     }
-    ans[depth].push_back(cur->val);
-    bfs(cur->left, ans, depth + 1);
-    bfs(cur->right, ans, depth + 1);
+    ans[depth].push_back(root->val);
+    dfs(root->left, ans, depth + 1);
+    dfs(root->right, ans, depth + 1);
 }
+
 vector<vector<int>> levelOrder(TreeNode* root) {
     vector<vector<int>> ans;
     int depth = 0;
-    bfs(root, ans, depth);
+    dfs(root, ans, depth);
     return ans;
 }
 
