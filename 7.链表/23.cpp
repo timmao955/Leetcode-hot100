@@ -6,27 +6,38 @@ using namespace std;
 struct ListNode {
     int val;
     ListNode* next;
+    ListNode() {
+        val = 0;
+        next = nullptr;
+    }
     ListNode(int x) {
         val = x;
         next = nullptr;
     }
 };
 
+struct comparator {
+    bool operator()(const ListNode* a, const ListNode* b) {
+        return a->val > b->val;
+    }
+};
+
 ListNode* mergeKLists(vector<ListNode*>& lists) {
-    vector<int> nums;
-    for (auto& l : lists) {
-        ListNode* cur = l;
-        while (cur != nullptr) {
-            nums.push_back(cur->val);
-            cur = cur->next;
+    ListNode dummy;
+    ListNode* cur = &dummy;
+    priority_queue<ListNode*, vector<ListNode*>, comparator> pq;
+    for (ListNode* head : lists) {
+        if (head != nullptr) {
+            pq.push(head);
         }
     }
-    sort(nums.begin(), nums.end());
-    ListNode dummy(0);
-    ListNode* cur = &dummy;
-    for (int i = 0; i < nums.size(); i++) {
-        ListNode* tmp = new ListNode(nums[i]);
-        cur->next = tmp;
+    while (!pq.empty()) {
+        ListNode* node = pq.top();
+        pq.pop();
+        if (node->next != nullptr) {
+            pq.push(node->next);
+        }
+        cur->next = node;
         cur = cur->next;
     }
     return dummy.next;
